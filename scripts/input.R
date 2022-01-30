@@ -50,6 +50,7 @@ analytical <- data.raw %>%
     dsex,
     q29,
     q58,
+    postwt,
   )
 
 # mockup of analytical dataset for SAP and public SAR
