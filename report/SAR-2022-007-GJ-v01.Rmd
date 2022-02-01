@@ -162,6 +162,9 @@ tab_inf %>%
 
 ### Stratification by sex
 
+- sex and iv: `r iv_chi_p %>% style_pvalue(prepend_p = TRUE, digits = 3)`
+- sex and dv: `r dv_chi_p %>% style_pvalue(prepend_p = TRUE, digits = 3)`
+
 # Observations and Limitations
 
 # Conclusions
