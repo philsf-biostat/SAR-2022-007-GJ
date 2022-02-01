@@ -4,8 +4,8 @@
 
 tab_inf <- svy %>%
   tbl_svysummary(
-    include = q29,
-    by = q58,
+    include = iv,
+    by = dv,
   ) %>%
   add_overall() %>%
   add_p(
