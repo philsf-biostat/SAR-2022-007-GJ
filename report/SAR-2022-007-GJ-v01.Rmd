@@ -142,7 +142,9 @@ tab_desc %>%
   )
 ```
 
-## Inferential analysis
+## Association between leadership commitment and telework satisfaction
+
+### Overall association
 
 ```{r tab_inf}
 tab_inf %>%
@@ -151,6 +153,8 @@ tab_inf %>%
     caption = "**Table 2** caption"
   )
 ```
+
+### Stratification by sex
 
 # Observations and Limitations
 
