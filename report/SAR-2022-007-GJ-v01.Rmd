@@ -172,8 +172,13 @@ tab_inf %>%
 
 ### Stratification by sex
 
-- males: `r dv_m_p %>% style_pvalue(prepend_p = TRUE, digits = 3)`
-- females: `r dv_f_p %>% style_pvalue(prepend_p = TRUE, digits = 3)`
+```{r tab_inf_22}
+tab_inf_22 %>%
+  as_kable(
+    align = "lccc",
+    caption = "**Table 3** caption"
+  )
+```
 
 The overall association appears to have an interaction with sex.
 
