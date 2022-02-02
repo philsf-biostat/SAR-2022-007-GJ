@@ -72,7 +72,7 @@ This analysis addresses a subset of the FEVS survey reflecting NASA employees.
 
 ## Objectives
 
-Test if there is an association between leadership commitment and
+Quantify the association between leadership commitment and
 telework employee satisfaction
 at NASA from the 2020 Federal Employee Viewpoint Survey.
 
@@ -105,7 +105,9 @@ After the cleaning process `r ncol(analytical)` variables were included in the a
 
 **Primary outcome**
 
-This analysis does not evaluate an outcome variable, but instead tests whether or not the distributions of answers from two questions are independent from one another.
+Odds of participants
+that are satisfied with telework
+at NASA from the 2020 Federal Employee Viewpoint Survey.
 
 ### Covariates
 
