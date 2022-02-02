@@ -1,5 +1,6 @@
 # setup -------------------------------------------------------------------
 library(broom)
+library(epitools)
 
 # associations with sex ---------------------------------------------------
 
@@ -26,3 +27,12 @@ dv_f_p <- dv_f %>% pull(p.value)
 
 cmh <- svytable(~iv + dv + dsex, svy) %>% mantelhaen.test() %>% tidy
 cmh_p <- cmh %>% pull(p.value)
+
+# OR ----------------------------------------------------------------------
+
+or_o <- svytable(~ iv2 + dv2, svy) %>% oddsratio()
+or_o <- or_o$measure[2, ]
+or_m <- svytable(~ iv2 + dv2, svy_m) %>% oddsratio()
+or_m <- or_m$measure[2, ]
+or_f <- svytable(~ iv2 + dv2, svy_f) %>% oddsratio()
+or_f <- or_f$measure[2, ]
