@@ -186,6 +186,17 @@ The overall association appears to have an interaction with sex.
 
 CMH test confirms an interaction is detectable.
 
+- OR overall: `r or_format(or_o)`
+- OR males: `r or_format(or_m)`
+- OR females: `r or_format(or_f)`
+
+Interpretation:
+
+1. Leadership commitment is associated with an increase of `r format.pct(or_o[1] -1, 0)` in employee satisfaction.
+2. There is **no** effect modification by sex in the association.
+
+Obs: high precision due to large study power.
+
 #### Additional analyses
 
 - sex and iv: `r iv_chi_p %>% style_pvalue(prepend_p = TRUE, digits = 3)`
