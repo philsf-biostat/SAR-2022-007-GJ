@@ -2,6 +2,17 @@
 library(broom)
 library(epitools)
 
+# pretty format of OR + CI
+or_format <- function(or, digits = 2) {
+  paste0(
+    "OR: ",
+    format.float(or[1], digits),
+    ", ",
+    "95% CI: ",
+    format.interval(or[2:3], digits)
+  )
+}
+
 # associations with sex ---------------------------------------------------
 
 dv_chi <- svychisq(~dv + dsex, svy, statistic = "Chisq") %>% tidy
