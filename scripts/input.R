@@ -43,11 +43,19 @@ data.raw <- data.raw %>%
 
 analytical <- data.raw %>%
   # select analytic variables
+  mutate(
+    dv = q58, # DV
+    iv = q29, # IV
+    dv2 = fct_collapse(dv, No_Agree=as.character(1:3), Agree=as.character(4:5)),
+    iv2 = fct_collapse(iv, No_Agree=as.character(1:3), Agree=as.character(4:5)),
+  ) %>%
   select(
     id,
     dsex,
-    dv = q58, # DV
-    iv = q29, # IV
+    dv,
+    iv,
+    dv2,
+    iv2,
     postwt,
   ) %>%
   # only use complete cases
